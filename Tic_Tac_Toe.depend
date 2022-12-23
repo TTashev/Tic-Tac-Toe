@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1670157840 source:c:\users\redeemer\documents\c++ programming\algoexpert\tic_tac_toe-bare\main.cpp
+	<iostream>
+	<conio.h>
+	<thread>
+	"MinMax.h"
+	<windows.h>
+
+1670157648 source:c:\users\redeemer\documents\c++ programming\algoexpert\tic_tac_toe-bare\src\minmax.cpp
+	"MinMax.h"
+	<algorithm>
+
+1670156340 c:\users\redeemer\documents\c++ programming\algoexpert\tic_tac_toe-bare\include\minmax.h
+
+1670790655 source:c:\users\tanya\desktop\tic_tac_toe-bare\main.cpp
+	<iostream>
+	<conio.h>
+	<map>
+	<thread>
+	"MinMax.h"
+	<windows.h>
+
+1670754161 c:\users\tanya\desktop\tic_tac_toe-bare\include\minmax.h
+
+1670791641 source:c:\users\tanya\desktop\tic_tac_toe-bare\src\minmax.cpp
+	"MinMax.h"
+	<algorithm>
+
+1671134113 source:c:\users\redeemer\desktop\tic_tac_toe-bare\main.cpp
+	<iostream>
+	<conio.h>
+	<map>
+	<thread>
+	"MinMax.h"
+	<windows.h>
+
+1671132078 c:\users\redeemer\desktop\tic_tac_toe-bare\include\minmax.h
+
+1671132204 source:c:\users\redeemer\desktop\tic_tac_toe-bare\src\minmax.cpp
+	"MinMax.h"
+	<algorithm>
+	<cstdlib>
+
+1671781173 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe-bare\main.cpp
+	<iostream>
+	<conio.h>
+	<map>
+	<functional>
+	<thread>
+	"MinMax.h"
+	<windows.h>
+	<curses.h>
+
+1671781480 c:\users\redeemer\documents\c++ programming\tic_tac_toe-bare\include\minmax.h
+
+1671781400 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe-bare\src\minmax.cpp
+	"MinMax.h"
+	<algorithm>
+	<limits>
+
+1671781173 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\main.cpp
+	<iostream>
+	<conio.h>
+	<map>
+	<functional>
+	<thread>
+	"MinMax.h"
+	<windows.h>
+	<curses.h>
+
+1671781480 c:\users\redeemer\documents\c++ programming\tic_tac_toe\include\minmax.h
+
+1671781400 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\src\minmax.cpp
+	"MinMax.h"
+	<algorithm>
+	<limits>
+
