@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include <map>
 #include <functional>
 #include <thread>
@@ -8,6 +7,7 @@
 
 #ifdef _WIN32
 #include <windows.h>
+#include <conio.h>
 #else
 #include <curses.h>
 #endif
