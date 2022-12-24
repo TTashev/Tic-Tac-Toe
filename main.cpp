@@ -41,8 +41,8 @@ std::map<char, int> playerMoves = {{'q', 0}, {'w', 1}, {'e', 2},
 
 MinMax minMax;
 
-void (*drawGamePtr)(){ &drawChooseDifficulty };
-int (MinMax::*aiPlayTurn)(char* board);
+std::function<void()> drawGamePtr = drawChooseDifficulty;
+std::function<int(MinMax, char* board)> aiPlayTurn;
 
 std::string levelClear =
 "###############################\n"
