@@ -58,20 +58,20 @@
 	<algorithm>
 	<limits>
 
-1671832877 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\main.cpp
+1674409766 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\main.cpp
 	<iostream>
 	<map>
 	<functional>
 	<thread>
-	"MinMax.h"
+	"include/MinMax.h"
 	<windows.h>
 	<conio.h>
 	<curses.h>
 
-1671781480 c:\users\redeemer\documents\c++ programming\tic_tac_toe\include\minmax.h
+1672571996 c:\users\redeemer\documents\c++ programming\tic_tac_toe\include\minmax.h
 
-1671781400 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\src\minmax.cpp
-	"MinMax.h"
+1674410159 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\src\minmax.cpp
+	"../include/MinMax.h"
 	<algorithm>
-	<limits>
+	<climits>
 

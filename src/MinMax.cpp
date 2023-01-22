@@ -1,7 +1,7 @@
-#include "MinMax.h"
+#include "../include/MinMax.h"
 
 #include <algorithm>
-#include <limits>
+#include <climits>
 
 static const char player = 'x';
 static const char opponent = 'o';
@@ -141,7 +141,7 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
         return 0;
     }
 
-    // If this maximizer's move
+    // If this maximizer's move (player move)
     if (isMax)
     {
         int best = INT_MIN;
@@ -166,7 +166,7 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
         return best - depth;
     }
 
-    // If this minimizer's move
+    // If this minimizer's move (ai move)
     else
     {
         int best = INT_MAX;
