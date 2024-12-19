@@ -1,5 +1,6 @@
 #include "../include/MinMax.h"
 
+#include <iostream>
 #include <algorithm>
 #include <climits>
 
@@ -124,12 +125,7 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
 {
     int score = checkResult(board);
 
-    if (score == 10)
-    {
-        return score;
-    }
-
-    if (score == -10)
+    if (score == 10 || score == -10)
     {
         return score;
     }
@@ -144,13 +140,13 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
     // If this maximizer's move (player move)
     if (isMax)
     {
-        int best = INT_MIN;
+        int best = -10;
 
         // Traverse all cells
         for (int i = 0; i < 9; i++)
         {
             // Check if cell is empty
-            if (board[i]=='-')
+            if (board[i] == '-')
             {
                 // Make the move
                 board[i] = player;
@@ -169,13 +165,13 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
     // If this minimizer's move (ai move)
     else
     {
-        int best = INT_MAX;
+        int best = 10;
 
         // Traverse all cells
         for (int i = 0; i < 9; i++)
         {
             // Check if cell is empty
-            if (board[i]=='-')
+            if (board[i] == '-')
             {
                 // Make the move
                 board[i] = opponent;
@@ -195,7 +191,7 @@ int MinMax::minimax_algo(char* board, int depth, bool isMax)
 int MinMax::findBestMove(char* board)
 {
     int bestVal = INT_MAX;
-    int bestMove = -1;
+    int bestMove = INT_MAX;
 
     // Traverse all cells, evaluate minimax function for
     // all empty cells. And return the cell with optimal
@@ -203,7 +199,7 @@ int MinMax::findBestMove(char* board)
     for (int i = 0; i < 9; i++)
     {
         // Check if cell is empty
-        if (board[i]=='-')
+        if (board[i] == '-')
         {
             // Make the move
             board[i] = opponent;

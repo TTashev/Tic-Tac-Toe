@@ -2,6 +2,7 @@
 #include <map>
 #include <functional>
 #include <thread>
+#include <mutex>
 
 #include "include/MinMax.h"
 
@@ -200,12 +201,13 @@ void drawGame()
         }
     }
 
-    std::cout << level << std::endl;
+    std::cout << level << "\n";
 }
 
 void processPlayerInput()
 {
     char pos;
+    std::mutex mtx;
 
     while(1)
     {
@@ -235,9 +237,11 @@ void processPlayerInput()
         {
             if(game[playerMoves[pos]] == '-' && turn_state == PLAYERS_TURN_STATE::PLAYER_TURN)
             {
+                mtx.lock();
                 game[playerMoves[pos]] = 'x';
 
                 turn_state = PLAYERS_TURN_STATE::AI_TURN;
+                mtx.unlock();
             }
         }
     }
@@ -250,9 +254,30 @@ void clearGame()
     level = levelClear;
 }
 
+void checkForEndGameCondition()
+{
+    // check for gameOver condition
+    if(minMax.checkResult(game) == 10  ||
+       minMax.checkResult(game) == -10 ||
+       !minMax.movesLeft(game))
+    {
+        if(minMax.checkResult(game) == 10)
+        {
+            player_score++;
+        }
+        else if(minMax.checkResult(game) == -10)
+        {
+            ai_score++;
+        }
+
+        clearGame();
+    }
+}
+
 int main()
 {
     std::thread inputThread (processPlayerInput);
+    std::mutex mtx;
 
     while(1)
     {
@@ -260,37 +285,27 @@ int main()
 
         if(turn_state == PLAYERS_TURN_STATE::AI_TURN)
         {
+            mtx.lock();
             int res = std::invoke(aiPlayTurn, minMax, game);
             turn_state = PLAYERS_TURN_STATE::PLAYER_TURN;
             if(res >= 0 && res < 9)
             {
                 game[res] = 'o';
             }
+            mtx.unlock();
         }
 
         drawGamePtr();
 
-        // check for gameOver condition
-        if(minMax.checkResult(game) == 10 || minMax.checkResult(game) == -10
-           || !minMax.movesLeft(game))
-        {
-            if(minMax.checkResult(game) == 10)
-            {
-                player_score++;
-            }
-            else if(minMax.checkResult(game) == -10)
-            {
-                ai_score++;
-            }
-
-            clearGame();
-        }
+        checkForEndGameCondition();
 
         clearScreen();
 
         t += std::chrono::milliseconds(33);
         std::this_thread::sleep_until(t);
     }
+
+    inputThread.join();
 
     return 0;
 }

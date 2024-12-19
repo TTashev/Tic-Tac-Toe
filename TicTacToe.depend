@@ -58,7 +58,7 @@
 	<algorithm>
 	<limits>
 
-1674409766 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\main.cpp
+1674413990 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\main.cpp
 	<iostream>
 	<map>
 	<functional>
@@ -66,12 +66,68 @@
 	"include/MinMax.h"
 	<windows.h>
 	<conio.h>
-	<curses.h>
+	<unistd.h>
+	<termios.h>
 
-1672571996 c:\users\redeemer\documents\c++ programming\tic_tac_toe\include\minmax.h
+1672575596 c:\users\redeemer\documents\c++ programming\tic_tac_toe\include\minmax.h
 
 1674410159 source:c:\users\redeemer\documents\c++ programming\tic_tac_toe\src\minmax.cpp
 	"../include/MinMax.h"
+	<algorithm>
+	<climits>
+
+1674413992 source:c:\users\ttashev\documents\c++ programming\tic_tac_toe\main.cpp
+	<iostream>
+	<map>
+	<functional>
+	<thread>
+	"include/MinMax.h"
+	<windows.h>
+	<conio.h>
+	<unistd.h>
+	<termios.h>
+
+1672575598 c:\users\ttashev\documents\c++ programming\tic_tac_toe\include\minmax.h
+
+1676716158 source:c:\users\ttashev\documents\c++ programming\tic_tac_toe\src\minmax.cpp
+	"../include/MinMax.h"
+	<algorithm>
+	<climits>
+
+1674413992 source:c:\users\ttashev\documents\c++ programming\tictactoe\main.cpp
+	<iostream>
+	<map>
+	<functional>
+	<thread>
+	"include/MinMax.h"
+	<windows.h>
+	<conio.h>
+	<unistd.h>
+	<termios.h>
+
+1672575598 c:\users\ttashev\documents\c++ programming\tictactoe\include\minmax.h
+
+1676716158 source:c:\users\ttashev\documents\c++ programming\tictactoe\src\minmax.cpp
+	"../include/MinMax.h"
+	<algorithm>
+	<climits>
+
+1734600300 source:c:\users\ttashev\documents\c++programming\tictactoe\main.cpp
+	<iostream>
+	<map>
+	<functional>
+	<thread>
+	"include/MinMax.h"
+	<windows.h>
+	<conio.h>
+	<unistd.h>
+	<termios.h>
+
+1734532180 c:\users\ttashev\documents\c++programming\tictactoe\include\minmax.h
+
+1708177598 source:c:\users\ttashev\documents\c++programming\tictactoe\src\minmax.cpp
+	"../include/MinMax.h"
+	<iostream>
 	<algorithm>
 	<climits>
 
